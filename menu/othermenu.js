@@ -2,13 +2,13 @@ const fs = require("fs");
 const { default: generateWAMessageFromContent, proto } = require("@whiskeysockets/baileys");
 
 module.exports = {
-  name: "downloadmenu",
-  alias: ["dlmenu", "dlpanel"],
-  desc: "Show download commands",
+  name: "othermenu",
+  alias: ["other", "misc"],
+  desc: "Show other commands",
   type: "main",
   start: async (killua, m, { pushName, toReact }) => {
     try {
-      await toReact("📥").catch(() => {});
+      await toReact("📦").catch(() => {});
 
       const BANNER_IMG = "https://files.catbox.moe/17jcwv.jpg";
       const MENU_SOUND = "https://files.catbox.moe/dav1ns.mp3";
@@ -26,15 +26,13 @@ module.exports = {
 │
 │ ⭒ *User* : ${pushName || "User"}
 │ ⭒ *Prefix* : [ . /! ]
-│ ⭒ *Category* : Download Menu
+│ ⭒ *Category* : Other Menu
 │
-├───「 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐒 」──
-│ > .apk
-│ > .mediafire
-│ > .play
-│ > .play2
-│ > .play3
-│ > .gitclone
+├───「 𝐎𝐓𝐇𝐄𝐑𝐒 」──
+│ > .hack
+│ > .channel
+│ > .repo
+│ > .help
 │
 ╰─────「 𝐀𝐋𝐏𝐇𝐀-𝐁𝐋𝐀𝐊𝐄 」─────
 
@@ -46,7 +44,7 @@ Powered by 𝐀𝐋𝐏𝐇𝐀-𝐗`;
         contextInfo: {
           externalAdReply: {
             title: "WITCHER-V1-MINI",
-            body: "Download Menu",
+            body: "Other Commands Menu",
             mediaType: 1,
             thumbnailUrl: BANNER_IMG,
             renderLargerThumbnail: true,
@@ -68,9 +66,9 @@ Powered by 𝐀𝐋𝐏𝐇𝐀-𝐗`;
       }, { quoted: m });
 
     } catch (error) {
-      console.error("Download Menu Error:", error);
+      console.error("Other Menu Error:", error);
       await killua.sendMessage(m.chat, {
-        text: "❌ Failed to load download menu. Try again later."
+        text: "❌ Failed to load other menu. Try again later."
       }, { quoted: m });
     }
   }
