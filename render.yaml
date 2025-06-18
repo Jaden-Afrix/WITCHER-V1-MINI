@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: witcher-v1-mini
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    autoDeploy: true
+
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: BOT_NAME
+        value: "𝐖𝐈𝐓𝐂𝐇𝐄𝐑 𝐕𝟏 𝐌𝐈𝐍𝐈"
+      - key: OWNER_NAME
+        value: "ALPHA-BLAKE"
+      - key: OWNER_NUMBERS
+        value: "+254780931677,+263784812740"
+      - key: CHANNEL_LINK
+        value: "https://whatsapp.com/channel/0029VbAxoHNF6sn7hhz2Ss24"
+
+    disk:
+      name: session-data
+      mountPath: /session
+      sizeGB: 1
+
+healthCheckPath: /
