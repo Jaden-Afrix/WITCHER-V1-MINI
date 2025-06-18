@@ -1,0 +1,43 @@
+{
+  "users": {
+    "1234567890@s.whatsapp.net": {
+      "name": "Example User",
+      "isOwner": false,
+      "banned": false,
+      "premium": false,
+      "limit": 10
+    },
+    "0987654321@s.whatsapp.net": {
+      "name": "Bot Owner",
+      "isOwner": true,
+      "banned": false,
+      "premium": true,
+      "limit": 1000
+    }
+  },
+  "chats": {
+    "1234567890-123456@g.us": {
+      "name": "Example Group",
+      "admins": [
+        "1234567890@s.whatsapp.net"
+      ],
+      "banned": false,
+      "welcomeEnabled": true
+    }
+  },
+  "settings": {
+    "prefix": ".",
+    "language": "en",
+    "antiSpam": true,
+    "autoRead": true
+  },
+  "messages": {
+    "lastMessageId": null,
+    "log": []
+  },
+  "stats": {
+    "commandsUsed": 0,
+    "bugsSent": 0,
+    "activeUsers": 2
+  }
+}
